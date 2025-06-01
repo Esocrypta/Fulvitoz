@@ -39,7 +39,7 @@ categorias.forEach(categoria => {
 const toggleThemeBtn = document.createElement("button");
 toggleThemeBtn.setAttribute("aria-label", "Alternar tema");
 toggleThemeBtn.innerHTML = `<span class="material-symbols-rounded">dark_mode</span>`;
-toggleThemeBtn.className = "fixed bottom-6 right-6 z-50 bg-white text-black dark:bg-black dark:text-white p-3 rounded-full shadow-xl transition-all duration-300";
+toggleThemeBtn.className = "fixed flex bottom-6 right-6 z-50 bg-white text-black dark:bg-black dark:text-white p-3 rounded-full shadow-xl transition-all duration-300";
 document.body.appendChild(toggleThemeBtn);
 
 // Define estado inicial com base no localStorage
