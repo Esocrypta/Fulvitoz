@@ -162,7 +162,7 @@ h2 {
 }
 
 /* ------------------------- */
-/*          SECTIONS         */
+/*         SECTIONS         */
 /* ------------------------- */
 .section {
   width: 100vw;
@@ -187,10 +187,6 @@ h2 {
   background-color: var(--verde-agua);
   margin: 0.5rem auto 0;
   border-radius: 999px;
-}
-
-.intro h2 {
-  color: var(--verde-agua);
 }
 
 /* ------------------------- */
@@ -348,8 +344,7 @@ h2 {
   background-color: transparent;
 }
 
-.dark .section-title,
-.dark .intro h2 {
+.dark .section-title {
   color: var(--verde-agua);
 }
 
