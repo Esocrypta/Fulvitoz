@@ -1,0 +1,339 @@
+/* =============================
+   VARIÁVEIS
+   ============================= */
+   :root {
+    --verde-agua: #71d6c7;
+    --verde-agua-dark: #45b8a9;
+    --cinza-fundo: #f9fbfa;
+    --cinza-claro: #e3e8e7;
+    --verde-agua-paragrafo: #71d6c7;
+    --fonte: 'Poppins', sans-serif;
+  }
+  
+  /* =============================
+     RESET + BASE
+     ============================= */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--fonte);
+    background-color: var(--cinza-fundo);
+    background-image: radial-gradient(circle at 1px 1px, var(--cinza-claro) 1px, transparent 0);
+    background-size: 20px 20px;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* =============================
+     HEADER INICIAL (personalizado)
+     ============================= */
+  .site-header {
+    background-color: #f3f4f6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 10;
+  }
+  
+  .site-header .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--verde-agua);
+    letter-spacing: -0.5px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #444;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--verde-agua-dark);
+  }
+  
+  .header-apresentacao {
+    background-color: #f3f4f6;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .header-apresentacao {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 6rem;
+    }
+  }
+  
+  .header-apresentacao .texto {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .header-apresentacao .texto h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--verde-agua);
+    margin-bottom: 0.5rem;
+  }
+  
+  .header-apresentacao .texto p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.3rem;
+  }
+  
+  .header-apresentacao .perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .header-apresentacao .perfil .foto {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 9999px;
+    background-color: #ccc;
+  }
+  
+  .header-apresentacao .perfil .social {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .header-apresentacao .perfil .social a {
+    color: var(--verde-agua);
+    font-size: 1.5rem;
+    transition: color 0.2s ease;
+  }
+  
+  .header-apresentacao .perfil .social a:hover {
+    color: var(--verde-agua-dark);
+  }  
+
+/* ------------------------- */
+/*          SECTIONS         */
+/* ------------------------- */
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--verde-agua);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--verde-agua);
+  margin: 0.5rem auto 0;
+  border-radius: 999px;
+}
+
+.intro h2 {
+  color: var(--verde-agua);
+}
+
+/* ------------------------- */
+/*         GALERIA           */
+/* ------------------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ------------------------- */
+/*         BOTÕES            */
+/* ------------------------- */
+.btn-galeria {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
+  background-color: white;
+  color: #333;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-galeria:hover {
+  background-color: var(--verde-agua);
+  color: white;
+}
+
+/* ------------------------- */
+/*     CONTATO E PARCEIRAS   */
+/* ------------------------- */
+.contato-box {
+  background-color: #ddd;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------------- */
+/*     BOTÕES FLUTUANTES     */
+/* ------------------------- */
+.floating-buttons {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 50;
+}
+
+.btn-floating {
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  color: #333;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.btn-floating:hover {
+  transform: scale(1.05);
+  background-color: var(--verde-agua);
+  color: white;
+}
+
+/* ------------------------- */
+/*           FOOTER          */
+/* ------------------------- */
+.site-footer {
+  background-color: var(--verde-agua);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.875rem;
+  margin-top: 4rem;
+}
+
+/* ------------------------- */
+/*       MODO ESCURO         */
+/* ------------------------- */
+body.dark {
+  background-color: #121212;
+  background-image: none;
+  color: #eaeaea;
+}
+
+.dark .site-header {
+  background-color: #1e1e1e;
+}
+
+.dark .nav-links a {
+  color: #ccc;
+}
+
+.dark .nav-links a:hover {
+  color: var(--verde-agua);
+}
+
+.dark .section-title,
+.dark .intro h2 {
+  color: var(--verde-agua);
+}
+
+.dark .card {
+  background-color: #1f1f1f;
+  color: #ddd;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.dark .btn-galeria {
+  background-color: #333;
+  color: white;
+}
+
+.dark .btn-galeria:hover {
+  background-color: var(--verde-agua);
+}
+
+.dark .site-footer {
+  background-color: #1e1e1e;
+  color: #bbb;
+}
+
+.dark .contato-box {
+  background-color: #2a2a2a;
+}
+
+/* ------------------------- */
+/*        SCROLLBAR          */
+/* ------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cinza-claro);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--verde-agua);
+  border-radius: 10px;
+  border: 2px solid var(--cinza-claro);
+}

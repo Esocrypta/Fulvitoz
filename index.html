@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fulvitoz · Portfólio</title>
+
+  <!-- Tailwind CSS base -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Google Fonts e ícones -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <script defer src="/scripts/gallery.js"></script>
+
+  <style>
+    .material-symbols-rounded {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 24px;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body class="font-sans">
+  <!-- HEADER -->
+  <header class="site-header bg-gray-100">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-extrabold text-teal-400">fulvitoz</h1>
+      <nav class="flex gap-6 text-sm">
+        <a href="#inicio" class="hover:underline">Início</a>
+        <a href="#ilustracoes" class="hover:underline">Ilustrações</a>
+        <a href="#motions" class="hover:underline">Motions</a>
+        <a href="#projetos" class="hover:underline">Projetos</a>
+        <a href="#contato" class="hover:underline">Contato</a>
+      </nav>
+    </div>
+
+    <!-- Apresentação -->
+    <div class="bg-gray-100 py-10 px-6 md:px-20 flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="flex-1 max-w-xl">
+        <h2 class="text-lg font-semibold text-teal-500 mb-2">Apresentação</h2>
+        <p class="text-sm text-gray-800">Fulvitoz é ilustrador e motion designer. Apaixonado por cores e movimento.</p>
+        <p class="text-sm text-gray-800 mt-2">Projetos</p>
+      </div>
+
+      <!-- Foto e redes sociais -->
+      <div class="flex flex-col items-center gap-4">
+        <div class="w-28 h-28 rounded-full bg-gray-300"></div>
+        <div class="flex gap-4">
+          <a href="#" class="text-teal-400 hover:text-teal-600">
+            <span class="material-symbols-rounded">photo_camera</span>
+          </a>
+          <a href="#" class="text-teal-400 hover:text-teal-600">
+            <span class="material-symbols-rounded">public</span>
+          </a>
+          <a href="#" class="text-teal-400 hover:text-teal-600">
+            <span class="material-symbols-rounded">ondemand_video</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <!-- ============================= -->
+    <!--       CONTEÚDO PRINCIPAL     -->
+    <!-- ============================= -->
+    <main class="container">
+      <section id="inicio" class="section intro">
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="flex-1">
+            <h2 class="text-xl font-semibold mb-2">Apresentação</h2>
+            <p>Fulvitoz é ilustrador e motion designer. Apaixonado por cores e movimento.</p>
+            <p class="mt-2">Projetos</p>
+          </div>
+          <div class="w-full md:w-40 h-40 bg-gray-300 rounded-full"></div>
+        </div>
+      </section>
+
+      <section id="ilustracoes" class="section">
+        <h2 class="section-title">Ilustrações</h2>
+        <div id="gallery-ilustracoes" class="gallery-grid"></div>
+        <button class="btn-galeria">Galeria</button>
+      </section>
+
+      <section id="motions" class="section bg-gray-100">
+        <h2 class="section-title">Motion</h2>
+        <div id="gallery-motion" class="gallery-grid"></div>
+        <button class="btn-galeria">Galeria</button>
+      </section>
+
+      <section id="design" class="section bg-gray-200">
+        <h2 class="section-title">Design</h2>
+        <div class="gallery-grid">
+          <div class="card"><p>Projeto Floreça</p></div>
+          <div class="card"><p>Projeto Rosaluna</p></div>
+          <div class="card"><p>Projeto Missão Verde</p></div>
+        </div>
+        <button class="btn-galeria">Projetos</button>
+      </section>
+
+      <section id="parcerias" class="section bg-gray-100">
+        <h2 class="section-title">Parcerias</h2>
+        <div class="gallery-grid">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+        <button class="btn-galeria">Ver Mais</button>
+      </section>
+
+      <section id="contato" class="section">
+        <div class="contato-box">
+          <div class="contato-info">
+            <p>Redes sociais e formas de contato</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================= -->
+    <!--      BOTÕES FLUTUANTES       -->
+    <!-- ============================= -->
+    <div class="floating-buttons fixed bottom-4 right-4 flex flex-col gap-3">
+      <button id="scroll-top" class="btn-floating bg-teal-400 text-white p-3 rounded-full shadow-md hover:bg-teal-500">
+        <span class="material-symbols-rounded">expand_less</span>
+      </button>
+      <button id="dark-toggle" class="btn-floating bg-teal-400 text-white p-3 rounded-full shadow-md hover:bg-teal-500">
+        <span class="material-symbols-rounded">dark_mode</span>
+      </button>
+    </div>
+
+    <!-- ============================= -->
+    <!--           FOOTER             -->
+    <!-- ============================= -->
+    <footer class="site-footer text-center text-sm text-white bg-teal-400 py-6 mt-10">
+      <p>&copy; 2025 Fulvitoz · Site desenvolvido por Gah e Keh</p>
+    </footer>
+  </body>
+</html>
